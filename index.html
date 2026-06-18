@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Football — Road to Glory</title>
+  <meta name="description" content="The deepest college football experience on Roblox. Build your player, dominate the gridiron, and chase your road to glory." />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="College Football — Road to Glory" />
+  <meta property="og:description" content="Build your player. Dominate the gridiron. Your road to glory starts here." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo.png" />
+  <meta name="theme-color" content="#0a0e14" />
+
+  <!-- Favicon (drop your icon at assets/logo.png to use it) -->
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======================= NAV ======================= -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__brand" aria-label="College Football home">
+        <span class="wordmark wordmark--sm">
+          <span class="wm wm--college">College</span>
+          <span class="wm wm--football">Football</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#modes">Game Modes</a>
+        <a href="#media">Screenshots</a>
+        <a href="#community">Community</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="#" data-link="discord" class="btn btn--ghost btn--icon" aria-label="Join our Discord" title="Join our Discord">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.32 4.37A19.8 19.8 0 0 0 15.4 2.8a.07.07 0 0 0-.08.04c-.21.38-.45.87-.62 1.25a18.27 18.27 0 0 0-5.4 0c-.17-.39-.42-.87-.63-1.25a.08.08 0 0 0-.08-.04A19.74 19.74 0 0 0 3.66 4.37a.07.07 0 0 0-.03.03C.53 9.04-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 6 3.03.08.08 0 0 0 .09-.03c.46-.63.87-1.3 1.23-2a.08.08 0 0 0-.04-.11c-.65-.25-1.27-.55-1.87-.9a.08.08 0 0 1-.01-.13l.37-.29a.07.07 0 0 1 .08-.01 14.2 14.2 0 0 0 12.06 0 .07.07 0 0 1 .08.01l.37.29a.08.08 0 0 1-.01.13c-.6.35-1.22.65-1.87.9a.08.08 0 0 0-.04.11c.36.7.78 1.36 1.23 2a.08.08 0 0 0 .09.03 19.84 19.84 0 0 0 6.01-3.03.08.08 0 0 0 .03-.05c.5-5.18-.84-9.69-3.54-13.67a.06.06 0 0 0-.03-.03ZM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42Zm7.97 0c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42Z"/></svg>
+        </a>
+        <a href="#" data-link="roblox" class="btn btn--gold nav__play">Play Now</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= HERO ======================= -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__yardlines"></div>
+        <div class="hero__glow hero__glow--gold"></div>
+        <div class="hero__glow hero__glow--green"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <span class="hero__eyebrow reveal">Free on Roblox</span>
+
+        <div class="hero__logo reveal">
+          <!-- If you add assets/logo.png it replaces this styled wordmark automatically -->
+          <img src="assets/logo.png" alt="College Football" class="hero__logo-img"
+               onload="this.classList.add('is-shown'); document.getElementById('heroWordmark').style.display='none';"
+               onerror="this.remove();" />
+          <span class="wordmark wordmark--xl" id="heroWordmark">
+            <span class="wm wm--college">College</span>
+            <span class="wm wm--football">Football</span>
+          </span>
+        </div>
+
+        <h1 class="hero__title reveal">Your road to glory starts on the gridiron.</h1>
+        <p class="hero__sub reveal">
+          Build your player from the ground up, master authentic football physics, and
+          take the field across iconic college stadiums. The deepest football experience on Roblox.
+        </p>
+
+        <div class="hero__cta reveal">
+          <a href="#" data-link="roblox" class="btn btn--gold btn--lg">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M5.2 2 22 6.8 17.2 22 2 17.2 5.2 2Zm5.1 7.3-1.2 4.4 4.4 1.2 1.2-4.4-4.4-1.2Z"/></svg>
+            Play Now on Roblox
+          </a>
+          <a href="#" data-link="discord" class="btn btn--ghost btn--lg">Join the Discord</a>
+        </div>
+      </div>
+
+      <a href="#features" class="hero__scroll" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ======================= STATS BAND ======================= -->
+    <section class="stats" aria-label="Game stats">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <div class="stat__num" data-count="2400000" data-suffix="+">0</div>
+          <div class="stat__label">Visits</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num" data-count="1200" data-suffix="+">0</div>
+          <div class="stat__label">Players Online</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num" data-count="58000" data-suffix="+">0</div>
+          <div class="stat__label">Favorites</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num" data-count="50000" data-suffix="+">0</div>
+          <div class="stat__label">Community Members</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FEATURES ======================= -->
+    <section class="section" id="features">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">What makes it different</span>
+          <h2 class="section__title">Everything you need to <span class="text-gold">dominate</span></h2>
+          <p class="section__lead">A complete football sandbox — from the player creator to the final whistle.</p>
+        </header>
+
+        <div class="features">
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3.9 0-7 2.7-7 6.3 0 2 1 3.2 1 4.7v2.4c0 .9.7 1.6 1.6 1.6h8.8c.9 0 1.6-.7 1.6-1.6V14c0-1.5 1-2.7 1-4.7C19 5.7 15.9 3 12 3Z"/><path d="M5 11h11"/><path d="M9 18v2.5"/><path d="M15 18v2.5"/></svg>
+            </div>
+            <h3>Build Your Player</h3>
+            <p>The deepest creator in Roblox football. Tune height, weight and wingspan, pick an archetype, and spend attribute points to craft a one-of-one athlete.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="9" ry="5.5" transform="rotate(-45 12 12)"/><path d="M9 9l6 6M10.5 8l1.5 1.5M8 10.5 9.5 12M13.5 14 15 15.5M12 12.5l1.5 1.5"/></svg>
+            </div>
+            <h3>Authentic Gameplay</h3>
+            <p>Real ball physics, multiple QB throw types, contested catches and a momentum-driven hit-stick tackling system that rewards timing and skill.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10c0-2.2 4-4 9-4s9 1.8 9 4-4 4-9 4-9-1.8-9-4Z"/><path d="M3 10v4c0 2.2 4 4 9 4s9-1.8 9-4v-4"/><path d="M8 12.5V18M16 12.5V18M12 13v6"/></svg>
+            </div>
+            <h3>Iconic Stadiums</h3>
+            <p>Take the field across detailed college venues and practice facilities, each loaded on its own server so every game has room to breathe.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+            </div>
+            <h3>Takeover & Momentum</h3>
+            <p>Catch fire and earn position-specific X-Factor abilities. Break ankles, trigger badges, and swing the game with a 2K-style takeover meter.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/><path d="M9 3.5 7 6M15 3.5 17 6"/></svg>
+            </div>
+            <h3>True College Rules</h3>
+            <p>A full automated officiating system calls the game like the real thing — college catch rules, overtime from the 25, penalties and live clock management.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M7 11v2M6 12h2"/><circle cx="16" cy="11" r="1"/><circle cx="18.5" cy="13.5" r="1"/></svg>
+            </div>
+            <h3>Save & Customize</h3>
+            <p>Multiple build slots let you save your athletes, swap gear and equipment, and jump straight back into your favorite setup whenever you play.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= GAME MODES ======================= -->
+    <section class="section section--alt" id="modes">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">Pick your style</span>
+          <h2 class="section__title">Game <span class="text-gold">Modes</span></h2>
+          <p class="section__lead">Whether you're grinding solo reps or running a full 11-on-11, there's a mode for it.</p>
+        </header>
+
+        <div class="modes">
+          <article class="mode reveal">
+            <span class="mode__tag">Competitive</span>
+            <h3>League Mode</h3>
+            <p>Organized, full-squad football with official and unofficial leagues. Pick your stadium, set your lineup and compete.</p>
+          </article>
+          <article class="mode reveal">
+            <span class="mode__tag">Pick-up</span>
+            <h3>Open Field</h3>
+            <p>Jump into fast, casual football with team-based scoring. Perfect for warming up or running it back with friends.</p>
+          </article>
+          <article class="mode reveal">
+            <span class="mode__tag">Solo</span>
+            <h3>Practice & Drills</h3>
+            <p>Dial in your build, test throw types and footwork, and master the controls before you hit the big stage.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= MEDIA / SCREENSHOTS ======================= -->
+    <section class="section" id="media">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">In-game</span>
+          <h2 class="section__title">Screenshots</h2>
+          <p class="section__lead">Drop your own captures into <code>assets/</code> to replace these placeholders.</p>
+        </header>
+
+        <div class="gallery">
+          <figure class="shot shot--wide reveal"><span>Gameplay</span></figure>
+          <figure class="shot reveal"><span>Player Builder</span></figure>
+          <figure class="shot reveal"><span>Stadium</span></figure>
+          <figure class="shot reveal"><span>Takeover</span></figure>
+          <figure class="shot shot--wide reveal"><span>Game Day</span></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= COMMUNITY ======================= -->
+    <section class="section section--alt" id="community">
+      <div class="container community">
+        <div class="community__text reveal">
+          <span class="section__kicker">Join the team</span>
+          <h2 class="section__title">Be part of the <span class="text-gold">community</span></h2>
+          <p class="section__lead">Get update news, find games, join leagues and talk ball with thousands of players in our Discord.</p>
+          <div class="community__cta">
+            <a href="#" data-link="discord" class="btn btn--gold btn--lg">Join the Discord</a>
+            <a href="#" data-link="group" class="btn btn--ghost btn--lg">Roblox Group</a>
+          </div>
+        </div>
+        <div class="community__card reveal" aria-hidden="true">
+          <div class="discord-card">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M20.32 4.37A19.8 19.8 0 0 0 15.4 2.8a.07.07 0 0 0-.08.04c-.21.38-.45.87-.62 1.25a18.27 18.27 0 0 0-5.4 0c-.17-.39-.42-.87-.63-1.25a.08.08 0 0 0-.08-.04A19.74 19.74 0 0 0 3.66 4.37a.07.07 0 0 0-.03.03C.53 9.04-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 6 3.03.08.08 0 0 0 .09-.03c.46-.63.87-1.3 1.23-2a.08.08 0 0 0-.04-.11c-.65-.25-1.27-.55-1.87-.9a.08.08 0 0 1-.01-.13l.37-.29a.07.07 0 0 1 .08-.01 14.2 14.2 0 0 0 12.06 0 .07.07 0 0 1 .08.01l.37.29a.08.08 0 0 1-.01.13c-.6.35-1.22.65-1.87.9a.08.08 0 0 0-.04.11c.36.7.78 1.36 1.23 2a.08.08 0 0 0 .09.03 19.84 19.84 0 0 0 6.01-3.03.08.08 0 0 0 .03-.05c.5-5.18-.84-9.69-3.54-13.67a.06.06 0 0 0-.03-.03ZM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42Zm7.97 0c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42Z"/></svg>
+            <div class="discord-card__count" data-count="50000" data-suffix="+">0</div>
+            <div class="discord-card__label">members and counting</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FINAL CTA ======================= -->
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <h2>Ready to take the field?</h2>
+        <p>It's free to play. Build your athlete and start your road to glory today.</p>
+        <a href="#" data-link="roblox" class="btn btn--gold btn--lg">Play Now on Roblox</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="wordmark wordmark--sm">
+          <span class="wm wm--college">College</span>
+          <span class="wm wm--football">Football</span>
+        </span>
+        <p class="footer__tag">Your road to glory starts on the gridiron.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="#features">Features</a>
+        <a href="#modes">Game Modes</a>
+        <a href="#media">Screenshots</a>
+        <a href="#community">Community</a>
+        <a href="#" data-link="discord">Discord</a>
+        <a href="#" data-link="roblox">Play</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <span>&copy; <span id="year">2026</span> College Football · Road to Glory.</span>
+      <span class="footer__fine">Not affiliated with or endorsed by Roblox Corporation.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
